@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tedisanxd — Software Developer building performance tools, system optimizers, trackers, and custom software in C++, C#, Python, Batch, and more." />
+  <meta name="author" content="Tedisanxd" />
+  <meta name="keywords" content="Tedisanxd, software developer, C++, C#, Python, Batch, PC tweaker, optimizer, portfolio" />
+  <title>Tedisanxd | Software Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== LOADER ===================== -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">&lt;Tedisanxd /&gt;</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ===================== SCROLL PROGRESS ===================== -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">Tedisanxd</span><span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"     class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about"    class="nav-link"        data-section="about">About</a></li>
+        <li><a href="#skills"   class="nav-link"        data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link"        data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav-link"        data-section="services">Services</a></li>
+        <li><a href="#contact"  class="nav-link"        data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up">
+        <span class="badge-dot"></span>
+        <span>Available for projects &amp; collaboration</span>
+      </div>
+      <h1 class="hero-title animate-fade-up">
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-name">Tedisanxd</span>
+        <span class="hero-role">Software <span class="accent">Developer</span></span>
+      </h1>
+      <p class="hero-subtitle animate-fade-up">
+        I build <span class="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <p class="hero-desc animate-fade-up">
+        Crafting performance tools, system optimizers, trackers &amp; custom software.<br />
+        Real code. Real results. Built to last.
+      </p>
+      <div class="hero-buttons animate-fade-up">
+        <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="mailto:tedisanxd1@gmail.com" class="btn btn-secondary">
+          <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://discord.com/users/tedisanxd" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+      </div>
+      <div class="hero-stats animate-fade-up">
+        <div class="stat">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Languages</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+          </div>
+          <span class="stat-label">Original Work</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about" class="scroll-down">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// about_me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">The developer behind the code</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <div class="about-label">Who I Am</div>
+          <p>
+            I'm <strong>Tedisanxd</strong> — a self-driven software developer focused on building tools that
+            actually solve problems. I specialize in performance optimization, system utilities, and custom
+            software tailored to real-world use cases.
+          </p>
+          <p>
+            My work spans low-level systems programming in C and C++, application development in C#, scripting
+            and automation in Python and Batch, and everything in between. I care about writing code that's
+            efficient, clean, and built to last.
+          </p>
+          <p>
+            Whether it's a PC tweaker squeezing every bit of performance from hardware, a system optimizer
+            keeping a machine running smooth, or a Minecraft ping tracker giving players the edge — I build
+            tools that are practical, fast, and genuinely useful.
+          </p>
+          <div class="about-facts">
+            <div class="fact"><i class="fas fa-code"></i><span>Clean, readable code</span></div>
+            <div class="fact"><i class="fas fa-bolt"></i><span>Performance-first mindset</span></div>
+            <div class="fact"><i class="fas fa-shield-alt"></i><span>Original, authentic work</span></div>
+            <div class="fact"><i class="fas fa-puzzle-piece"></i><span>Problem-solver at heart</span></div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="code-window">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-filename">developer.cpp</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="c-comment">// Tedisanxd — Software Developer</span>
+<span class="c-keyword">class</span> <span class="c-class">Developer</span> {
+<span class="c-keyword">public</span>:
+  <span class="c-type">string</span> name    = <span class="c-string">"Tedisanxd"</span>;
+  <span class="c-type">string</span> focus   = <span class="c-string">"Tools &amp; Utilities"</span>;
+  <span class="c-type">bool</span>   serious  = <span class="c-bool">true</span>;
+  <span class="c-type">bool</span>   original = <span class="c-bool">true</span>;
+
+  <span class="c-type">vector</span>&lt;<span class="c-type">string</span>&gt; languages = {
+    <span class="c-string">"C++"</span>, <span class="c-string">"C#"</span>, <span class="c-string">"C"</span>,
+    <span class="c-string">"Python"</span>, <span class="c-string">"Batch"</span>
+  };
+
+  <span class="c-type">void</span> <span class="c-func">build</span>(<span class="c-type">string</span> idea) {
+    <span class="c-comment">// Turn ideas into working software</span>
+    <span class="c-keyword">while</span> (!done) {
+      code(); test(); refine();
+    }
+    ship();
+  }
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// tech_stack</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">Languages and tools I work with</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon cpp"><span>C++</span></div>
+          <div class="skill-info">
+            <h3>C++</h3>
+            <p>Systems programming, performance tools, low-level optimization &amp; Windows API</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon csharp"><span>C#</span></div>
+          <div class="skill-info">
+            <h3>C#</h3>
+            <p>Desktop applications, system utilities, GUI tools with .NET and WinForms</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon clang"><span>C</span></div>
+          <div class="skill-info">
+            <h3>C</h3>
+            <p>Low-level programming, memory management, system-level interfaces</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            <span class="skill-level">Proficient</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon python"><span>Py</span></div>
+          <div class="skill-info">
+            <h3>Python</h3>
+            <p>Automation, scripting, network tools, trackers, rapid development</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon batch"><span>BAT</span></div>
+          <div class="skill-info">
+            <h3>Batch / CMD</h3>
+            <p>Windows automation, system scripts, tweakers, batch-based utilities</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            <span class="skill-level">Expert</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon plus"><i class="fas fa-plus"></i></div>
+          <div class="skill-info">
+            <h3>And More</h3>
+            <p>PowerShell, shell scripting, web basics — always learning &amp; expanding</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            <span class="skill-level">Growing</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="skills-tags reveal">
+        <span class="tag">Performance Optimization</span>
+        <span class="tag">System Tools</span>
+        <span class="tag">Desktop Apps</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Low-Level Programming</span>
+        <span class="tag">Windows Development</span>
+        <span class="tag">Game Tools</span>
+        <span class="tag">CLI Tools</span>
+        <span class="tag">Networking</span>
+        <span class="tag">Memory Management</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// featured_work</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">Real software, built from scratch</p>
+      </div>
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cpp">C++</button>
+        <button class="filter-btn" data-filter="csharp">C#</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="batch">Batch</button>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" data-categories="cpp batch">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon blue"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">PC Tweaker</h3>
+          <p class="project-desc">
+            A powerful Windows optimization tool that applies system-level tweaks to maximize PC performance.
+            Targets latency, memory, and CPU efficiency for both gaming and general use.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Batch</span>
+            <span class="tech-tag">Windows API</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-type"><i class="fas fa-wrench"></i> Performance Tool</span>
+            <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" class="project-link">
+              View <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-categories="csharp">
+          <div class="project-glow purple"></div>
+          <div class="project-header">
+            <div class="project-icon purple"><i class="fas fa-microchip"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">System Optimizer</h3>
+          <p class="project-desc">
+            A comprehensive C# desktop application that cleans junk files, manages startup programs,
+            optimizes RAM usage, and keeps your system running at peak performance.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">.NET</span>
+            <span class="tech-tag">WinForms</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-type"><i class="fas fa-cogs"></i> System Utility</span>
+            <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" class="project-link">
+              View <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-categories="python">
+          <div class="project-glow green"></div>
+          <div class="project-header">
+            <div class="project-icon green"><i class="fas fa-satellite-dish"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" title="View on GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Minecraft Ping Tracker</h3>
+          <p class="project-desc">
+            A Python tool that monitors and logs Minecraft server ping in real-time.
+            Tracks latency spikes, displays live stats, and helps players and server owners diagnose connectivity issues.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Networking</span>
+            <span class="tech-tag">CLI</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-type"><i class="fas fa-gamepad"></i> Game Tool</span>
+            <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" class="project-link">
+              View <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-cta reveal">
+        <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" class="btn-outline-full">
+          <i class="fab fa-github"></i> View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// what_i_build</span>
+        <h2 class="section-title">What I Can Build <span class="accent">For You</span></h2>
+        <p class="section-subtitle">From concept to working software</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3>Performance Tools</h3>
+          <p>Custom PC tweakers, optimizers, and tuning utilities designed to push your hardware to its limits.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>System Utilities</h3>
+          <p>Cleaners, startup managers, registry tools, and maintenance software built for Windows.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Custom Scripts</h3>
+          <p>Batch, Python, and PowerShell scripts that automate repetitive tasks and streamline your workflow.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-gamepad"></i></div>
+          <h3>Game-Related Tools</h3>
+          <p>Trackers, ping monitors, stat utilities, and tools built specifically for gamers and server owners.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>Automation</h3>
+          <p>Automate file management, system monitoring, data collection, and more with reliable scripts.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-desktop"></i></div>
+          <h3>Desktop Applications</h3>
+          <p>GUI and CLI applications built in C# or C++ with clean interfaces and solid functionality.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Tracking &amp; Monitoring</h3>
+          <p>Real-time monitoring tools, loggers, and trackers that capture and display the metrics you care about.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-memory"></i></div>
+          <h3>Optimization Solutions</h3>
+          <p>Software targeting specific bottlenecks — memory, CPU, disk, network — and resolving them effectively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY CHOOSE ME ===================== -->
+  <section id="why" class="why section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// why_tedisanxd</span>
+        <h2 class="section-title">Why <span class="accent">Choose Me</span></h2>
+        <p class="section-subtitle">What sets my work apart from the rest</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-number">01</div>
+          <i class="fas fa-code why-icon"></i>
+          <h3>Clean Code</h3>
+          <p>Every project is written with clarity and maintainability in mind. No bloat, no unnecessary complexity — just solid, readable code.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-number">02</div>
+          <i class="fas fa-bolt why-icon"></i>
+          <h3>Performance-First</h3>
+          <p>I optimize at every level — from algorithm choice to memory layout. Speed and efficiency are non-negotiable in my work.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-number">03</div>
+          <i class="fas fa-fingerprint why-icon"></i>
+          <h3>100% Original</h3>
+          <p>All code is written from scratch. No copy-paste, no stolen work. Everything I deliver is authentic, unique, and mine.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-number">04</div>
+          <i class="fas fa-layer-group why-icon"></i>
+          <h3>Multi-Language</h3>
+          <p>C++, C#, C, Python, Batch — I choose the right tool for the job, not just the one I'm most comfortable with.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-number">05</div>
+          <i class="fas fa-bullseye why-icon"></i>
+          <h3>Practical Solutions</h3>
+          <p>I build things that work in the real world. No theoretical over-engineering — software that actually solves the problem.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-number">06</div>
+          <i class="fas fa-gem why-icon"></i>
+          <h3>Attention to Detail</h3>
+          <p>From edge cases to UI polish, I sweat the details so the end result feels solid, complete, and professional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// get_in_touch</span>
+        <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+        <p class="section-subtitle">Open for work, collaboration, and custom projects</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-text reveal">
+          <h3>Have a project in mind?</h3>
+          <p>
+            Whether you need a custom tool, performance optimizer, automation script, or desktop application —
+            I'm here to build it. Reach out through any of the channels below and let's make something great.
+          </p>
+          <p>
+            I'm open to freelance work, collaborations, and interesting projects. Don't hesitate to reach out.
+          </p>
+          <div class="contact-availability">
+            <span class="avail-dot"></span>
+            <span>Currently available for new projects</span>
+          </div>
+        </div>
+        <div class="contact-links reveal">
+          <a href="https://github.com/Tedisanxd" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon github-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-info">
+              <span class="contact-platform">GitHub</span>
+              <span class="contact-handle">Tedisanxd</span>
+            </div>
+            <i class="fas fa-arrow-right contact-arrow"></i>
+          </a>
+          <a href="mailto:tedisanxd1@gmail.com" class="contact-card">
+            <div class="contact-icon gmail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info">
+              <span class="contact-platform">Email</span>
+              <span class="contact-handle">tedisanxd1@gmail.com</span>
+            </div>
+            <i class="fas fa-arrow-right contact-arrow"></i>
+          </a>
+          <a href="https://discord.com/users/tedisanxd" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon discord-icon"><i class="fab fa-discord"></i></div>
+            <div class="contact-info">
+              <span class="contact-platform">Discord</span>
+              <span class="contact-handle">@tedisanxd</span>
+            </div>
+            <i class="fas fa-arrow-right contact-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">
+          <span class="logo-bracket">&lt;</span><span class="logo-name">Tedisanxd</span><span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Building real software. Original work. Always.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-credit">Made by <strong>Tedisanxd</strong> — Original work, 100% authentic</p>
+        <p class="footer-copy">&copy; <span id="footer-year"></span> Tedisanxd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
